@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Astro & Bolt - Cruce Imposible</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="game-container"></div>
+
+  <div id="hud">
+    <div class="brand">ASTRO <span>& BOLT</span></div>
+    <div class="stats">
+      <div> Vidas: <b id="vidas">3</b></div>
+      <div> Puntos: <b id="puntos">0</b></div>
+      <div> Metas: <b id="metas">0/3</b></div>
+      <div> Tiempo: <b id="tiempo">120</b>s</div>
+    </div>
+  </div>
+
+  <div id="overlay">
+    <div class="panel">
+      <h1 id="titulo">ASTRO & BOLT</h1>
+      <h2 id="subtitulo">CRUCE IMPOSIBLE 3D</h2>
+      <p id="mensaje">
+        Cruza las autopistas y el río.
+        Utiliza los troncos para llegar a las tres metas.
+      </p>
+      <p class="controles">
+        WASD / Flechas: mover<br>
+        ESPACIO: saltar<br>
+        P o ESC: pausar
+      </p>
+      <button id="btnJugar">COMENZAR MISIÓN</button>
+    </div>
+  </div>
+
+  <div id="pausa" class="hidden">
+    <div class="panel">
+      <h1>JUEGO EN PAUSA</h1>
+      <p>Presiona P o ESC para continuar.</p>
+      <button id="btnContinuar">CONTINUAR</button>
+    </div>
+  </div>
+
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
